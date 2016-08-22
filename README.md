@@ -42,6 +42,9 @@ for (const auto& obj : input_data) {
     to_write.send(std::move(s));
 }
 
+// Close the channel when completed, and join to the output thread until the
+// channel is drained.
+to_write.close();
 output_thread.join();
 ```
 

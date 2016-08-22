@@ -19,7 +19,7 @@ Dummy example asynchronously processes a vector, and writes the output to a
 file.
 
 ```cpp
-Channel<std::string> to_write;
+dadrian::Channel<std::string> to_write;
 std::fstream output_file("output.txt");
 
 // Write output to a file as it comes through the queue
